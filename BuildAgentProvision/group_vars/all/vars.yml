@@ -1,5 +1,6 @@
-url_azure: https://dev.azure.com/
-token_azure: 
-name_pool_azure: 
-user_name_vm: 
+url_azure: https://dev.azure.com/axityswd
+token_azure: u3qjkbotehhcb22puqvugy4wrgmca3jvwyegfu2vdblay6alaira
+name_pool_azure: Axity-Pool
+user_name_vm: adminuser
 agent_url_download: https://vstsagentpackage.azureedge.net/agent/3.220.2/vsts-agent-linux-x64-3.220.2.tar.gz
+agent_name_tar: vsts-agent-linux-x64-3.220.2.tar.gz

@@ -1,7 +1,6 @@
 ---
 - name: Install Docker on Ubuntu
   hosts: all
-  become: yes
   tasks:
     - name: Download Docker install script
       get_url:
@@ -17,7 +16,21 @@
       shell: sh /tmp/get-docker.sh
 
     - name: Install uidmap
-      shell: sudo apt-get install -y uidmap
+      apt:
+        name: uidmap
+        state: present
+        update_cache: yes
 
     - name: Set permissions for /var/run/docker.sock
       shell: sudo chmod o+rw /var/run/docker.sock
+
+    - name: Install unzip tool
+      apt:
+        name: unzip
+        state: present
+        update_cache: yes
+
+    # - name: Unzip a file unarchive:
+    #   src: /path/to/your/source/file.zip
+    #   dest: /path/where/you/want/to/extract
+    #   remote_src: yes

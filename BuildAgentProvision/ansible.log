@@ -1,0 +1,1268 @@
+2023-08-15 18:14:45,022 p=18912 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:14:45,023 p=18912 u=codespace n=ansible | [WARNING]: Unable to parse /workspaces/Ansible-Axity/BuildAgentProvision/inventory as an inventory source
+
+2023-08-15 18:14:45,023 p=18912 u=codespace n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-08-15 18:14:45,040 p=18912 u=codespace n=ansible | {
+    "_meta": {
+        "hostvars": {}
+    },
+    "all": {
+        "children": [
+            "ungrouped"
+        ]
+    }
+}
+2023-08-15 18:18:15,880 p=20311 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:18:15,969 p=20311 u=codespace n=ansible | {
+    "_meta": {
+        "hostvars": {
+            "13.68.210.15": {
+                "ansible_user": "adminuser"
+            },
+            "db1.dev.example.com": {
+                "db_name": "mydatabase",
+                "db_password": "securepassword",
+                "db_user": "dbuser"
+            },
+            "db2.dev.example.com": {
+                "db_name": "mydatabase",
+                "db_password": "securepassword",
+                "db_user": "dbuser"
+            },
+            "host1.dev.example.com": {
+                "ansible_ssh_private_key_file": "/path/to/key1.pem",
+                "ansible_ssh_user": "devuser"
+            },
+            "host2.dev.example.com": {
+                "ansible_ssh_private_key_file": "/path/to/key2.pem",
+                "ansible_ssh_user": "devuser"
+            },
+            "web1.dev.example.com": {
+                "http_port": 8080,
+                "max_requests_per_child": 500
+            },
+            "web2.dev.example.com": {
+                "http_port": 8080,
+                "max_requests_per_child": 500
+            }
+        }
+    },
+    "all": {
+        "children": [
+            "app_servers",
+            "buildAgents",
+            "dbservers",
+            "ungrouped",
+            "webservers"
+        ]
+    },
+    "app_servers": {
+        "children": [
+            "backend_servers"
+        ]
+    },
+    "backend_servers": {
+        "hosts": [
+            "backend1.dev.example.com",
+            "backend2.dev.example.com"
+        ]
+    },
+    "buildAgents": {
+        "hosts": [
+            "13.68.210.15"
+        ]
+    },
+    "dbservers": {
+        "hosts": [
+            "db1.dev.example.com",
+            "db2.dev.example.com"
+        ]
+    },
+    "ungrouped": {
+        "hosts": [
+            "host1.dev.example.com",
+            "host2.dev.example.com"
+        ]
+    },
+    "webservers": {
+        "hosts": [
+            "web1.dev.example.com",
+            "web2.dev.example.com"
+        ]
+    }
+}
+2023-08-15 18:24:27,090 p=22631 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:24:27,680 p=22631 u=codespace n=ansible | 13.68.210.15 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '13.68.210.15' (ECDSA) to the list of known hosts.\r\nno such identity: /path/to/mykey.pem: No such file or directory\r\nadminuser@13.68.210.15: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-15 18:24:50,271 p=22817 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:24:50,288 p=22817 u=codespace n=ansible | {
+    "_meta": {
+        "hostvars": {
+            "13.68.210.15": {
+                "ansible_user": "adminuser"
+            }
+        }
+    },
+    "all": {
+        "children": [
+            "buildAgents",
+            "ungrouped"
+        ]
+    },
+    "buildAgents": {
+        "hosts": [
+            "13.68.210.15"
+        ]
+    }
+}
+2023-08-15 18:24:55,633 p=22900 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:24:56,099 p=22900 u=codespace n=ansible | 13.68.210.15 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /path/to/mykey.pem: No such file or directory\r\nadminuser@13.68.210.15: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2023-08-15 18:35:55,203 p=27446 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:35:58,091 p=27446 u=codespace n=ansible | 13.68.210.15 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-08-15 18:38:38,274 p=28498 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:38:41,914 p=28498 u=codespace n=ansible | 13.68.210.15 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.1.4"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fe80::20d:3aff:fe9b:1914"
+        ],
+        "ansible_apparmor": {
+            "status": "enabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "12/07/2018",
+        "ansible_bios_vendor": "American Megatrends Inc.",
+        "ansible_bios_version": "090008",
+        "ansible_board_asset_tag": "NA",
+        "ansible_board_name": "Virtual Machine",
+        "ansible_board_serial": "0000-0013-4978-2021-6308-5075-67",
+        "ansible_board_vendor": "Microsoft Corporation",
+        "ansible_board_version": "7.0",
+        "ansible_chassis_asset_tag": "7783-7084-3265-9085-8269-3286-77",
+        "ansible_chassis_serial": "5033-7631-0120-7465-1185-6254-52",
+        "ansible_chassis_vendor": "Microsoft Corporation",
+        "ansible_chassis_version": "7.0",
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-5.4.0-1109-azure",
+            "console": "ttyS0",
+            "earlyprintk": "ttyS0",
+            "ro": true,
+            "root": "UUID=59108db9-06fc-4c15-b69a-7abd82e324bf"
+        },
+        "ansible_date_time": {
+            "date": "2023-08-15",
+            "day": "15",
+            "epoch": "1692124721",
+            "epoch_int": "1692124721",
+            "hour": "18",
+            "iso8601": "2023-08-15T18:38:41Z",
+            "iso8601_basic": "20230815T183841700918",
+            "iso8601_basic_short": "20230815T183841",
+            "iso8601_micro": "2023-08-15T18:38:41.700918Z",
+            "minute": "38",
+            "month": "08",
+            "second": "41",
+            "time": "18:38:41",
+            "tz": "UTC",
+            "tz_dst": "UTC",
+            "tz_offset": "+0000",
+            "weekday": "Tuesday",
+            "weekday_number": "2",
+            "weeknumber": "33",
+            "year": "2023"
+        },
+        "ansible_default_ipv4": {
+            "address": "10.0.1.4",
+            "alias": "eth0",
+            "broadcast": "10.0.1.255",
+            "gateway": "10.0.1.1",
+            "interface": "eth0",
+            "macaddress": "00:0d:3a:9b:19:14",
+            "mtu": 1500,
+            "netmask": "255.255.255.0",
+            "network": "10.0.1.0",
+            "type": "ether"
+        },
+        "ansible_default_ipv6": {},
+        "ansible_device_links": {
+            "ids": {
+                "sda": [
+                    "scsi-36002248018ae77bc9877728dc12bd3f3",
+                    "wwn-0x6002248018ae77bc9877728dc12bd3f3"
+                ],
+                "sda1": [
+                    "scsi-36002248018ae77bc9877728dc12bd3f3-part1",
+                    "wwn-0x6002248018ae77bc9877728dc12bd3f3-part1"
+                ],
+                "sda14": [
+                    "scsi-36002248018ae77bc9877728dc12bd3f3-part14",
+                    "wwn-0x6002248018ae77bc9877728dc12bd3f3-part14"
+                ],
+                "sda15": [
+                    "scsi-36002248018ae77bc9877728dc12bd3f3-part15",
+                    "wwn-0x6002248018ae77bc9877728dc12bd3f3-part15"
+                ],
+                "sdb": [
+                    "scsi-3600224802e367b309e2825528c7fb42d",
+                    "wwn-0x600224802e367b309e2825528c7fb42d"
+                ],
+                "sdb1": [
+                    "scsi-3600224802e367b309e2825528c7fb42d-part1",
+                    "wwn-0x600224802e367b309e2825528c7fb42d-part1"
+                ]
+            },
+            "labels": {
+                "sda1": [
+                    "cloudimg-rootfs"
+                ],
+                "sda15": [
+                    "UEFI"
+                ]
+            },
+            "masters": {},
+            "uuids": {
+                "sda1": [
+                    "59108db9-06fc-4c15-b69a-7abd82e324bf"
+                ],
+                "sda15": [
+                    "9F22-48B9"
+                ],
+                "sdb1": [
+                    "2cd34a1c-641e-4b21-a0fc-e49f735ca9f7"
+                ]
+            }
+        },
+        "ansible_devices": {
+            "loop0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop2": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop3": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop4": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop5": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop6": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop7": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "sda": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [
+                        "scsi-36002248018ae77bc9877728dc12bd3f3",
+                        "wwn-0x6002248018ae77bc9877728dc12bd3f3"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "Virtual Disk",
+                "partitions": {
+                    "sda1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "scsi-36002248018ae77bc9877728dc12bd3f3-part1",
+                                "wwn-0x6002248018ae77bc9877728dc12bd3f3-part1"
+                            ],
+                            "labels": [
+                                "cloudimg-rootfs"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "59108db9-06fc-4c15-b69a-7abd82e324bf"
+                            ]
+                        },
+                        "sectors": "62689247",
+                        "sectorsize": 512,
+                        "size": "29.89 GB",
+                        "start": "227328",
+                        "uuid": "59108db9-06fc-4c15-b69a-7abd82e324bf"
+                    },
+                    "sda14": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "scsi-36002248018ae77bc9877728dc12bd3f3-part14",
+                                "wwn-0x6002248018ae77bc9877728dc12bd3f3-part14"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": []
+                        },
+                        "sectors": "8192",
+                        "sectorsize": 512,
+                        "size": "4.00 MB",
+                        "start": "2048",
+                        "uuid": null
+                    },
+                    "sda15": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "scsi-36002248018ae77bc9877728dc12bd3f3-part15",
+                                "wwn-0x6002248018ae77bc9877728dc12bd3f3-part15"
+                            ],
+                            "labels": [
+                                "UEFI"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "9F22-48B9"
+                            ]
+                        },
+                        "sectors": "217088",
+                        "sectorsize": 512,
+                        "size": "106.00 MB",
+                        "start": "10240",
+                        "uuid": "9F22-48B9"
+                    }
+                },
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "62916608",
+                "sectorsize": "512",
+                "size": "30.00 GB",
+                "support_discard": "2097152",
+                "vendor": "Msft",
+                "virtual": 1,
+                "wwn": "0x6002248018ae77bc9877728dc12bd3f3"
+            },
+            "sdb": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [
+                        "scsi-3600224802e367b309e2825528c7fb42d",
+                        "wwn-0x600224802e367b309e2825528c7fb42d"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "Virtual Disk",
+                "partitions": {
+                    "sdb1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "scsi-3600224802e367b309e2825528c7fb42d-part1",
+                                "wwn-0x600224802e367b309e2825528c7fb42d-part1"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "2cd34a1c-641e-4b21-a0fc-e49f735ca9f7"
+                            ]
+                        },
+                        "sectors": "16773120",
+                        "sectorsize": 512,
+                        "size": "8.00 GB",
+                        "start": "2048",
+                        "uuid": "2cd34a1c-641e-4b21-a0fc-e49f735ca9f7"
+                    }
+                },
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "16777216",
+                "sectorsize": "512",
+                "size": "8.00 GB",
+                "support_discard": "2097152",
+                "vendor": "Msft",
+                "virtual": 1,
+                "wwn": "0x600224802e367b309e2825528c7fb42d"
+            }
+        },
+        "ansible_distribution": "Ubuntu",
+        "ansible_distribution_file_parsed": true,
+        "ansible_distribution_file_path": "/etc/os-release",
+        "ansible_distribution_file_variety": "Debian",
+        "ansible_distribution_major_version": "18",
+        "ansible_distribution_release": "bionic",
+        "ansible_distribution_version": "18.04",
+        "ansible_dns": {
+            "nameservers": [
+                "127.0.0.53"
+            ],
+            "options": {
+                "edns0": true
+            },
+            "search": [
+                "mtjgn5klhk3ebjxny3icivkx2g.bx.internal.cloudapp.net"
+            ]
+        },
+        "ansible_domain": "internal.cloudapp.net",
+        "ansible_effective_group_id": 0,
+        "ansible_effective_user_id": 0,
+        "ansible_env": {
+            "HOME": "/root",
+            "LANG": "C.UTF-8",
+            "LOGNAME": "root",
+            "MAIL": "/var/mail/root",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin",
+            "PWD": "/home/adminuser",
+            "SHELL": "/bin/bash",
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-kidxsgjstjxiuvxmtqhftpbfawlnxfuk ; /usr/bin/python3 /home/adminuser/.ansible/tmp/ansible-tmp-1692124719.4035068-28508-169954988076073/AnsiballZ_setup.py",
+            "SUDO_GID": "1000",
+            "SUDO_UID": "1000",
+            "SUDO_USER": "adminuser",
+            "TERM": "xterm-256color",
+            "USER": "root",
+            "USERNAME": "root"
+        },
+        "ansible_eth0": {
+            "active": true,
+            "device": "eth0",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "on",
+                "loopback": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "on",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "on [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "on",
+                "tx_checksum_ipv6": "on",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "on [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "off",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "10.0.1.4",
+                "broadcast": "10.0.1.255",
+                "netmask": "255.255.255.0",
+                "network": "10.0.1.0"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::20d:3aff:fe9b:1914",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "00:0d:3a:9b:19:14",
+            "module": "hv_netvsc",
+            "mtu": 1500,
+            "pciid": "000d3a9b-1914-000d-3a9b-1914000d3a9b",
+            "promisc": false,
+            "speed": 50000,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "ether"
+        },
+        "ansible_fibre_channel_wwn": [],
+        "ansible_fips": false,
+        "ansible_form_factor": "Desktop",
+        "ansible_fqdn": "hostname.internal.cloudapp.net",
+        "ansible_hostname": "hostname",
+        "ansible_hostnqn": "",
+        "ansible_interfaces": [
+            "lo",
+            "eth0"
+        ],
+        "ansible_is_chroot": false,
+        "ansible_iscsi_iqn": "",
+        "ansible_kernel": "5.4.0-1109-azure",
+        "ansible_kernel_version": "#115~18.04.1-Ubuntu SMP Mon May 22 20:06:37 UTC 2023",
+        "ansible_lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "off",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "loopback"
+        },
+        "ansible_local": {},
+        "ansible_lsb": {
+            "codename": "bionic",
+            "description": "Ubuntu 18.04.6 LTS",
+            "id": "Ubuntu",
+            "major_release": "18",
+            "release": "18.04"
+        },
+        "ansible_lvm": {
+            "lvs": {},
+            "pvs": {},
+            "vgs": {}
+        },
+        "ansible_machine": "x86_64",
+        "ansible_machine_id": "b69f36e5f56d4f658aa27089bbd9ff5a",
+        "ansible_memfree_mb": 3426,
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 3725,
+                "used": 207
+            },
+            "real": {
+                "free": 3426,
+                "total": 3932,
+                "used": 506
+            },
+            "swap": {
+                "cached": 0,
+                "free": 0,
+                "total": 0,
+                "used": 0
+            }
+        },
+        "ansible_memtotal_mb": 3932,
+        "ansible_mounts": [
+            {
+                "block_available": 7220818,
+                "block_size": 4096,
+                "block_total": 7574544,
+                "block_used": 353726,
+                "device": "/dev/sda1",
+                "fstype": "ext4",
+                "inode_available": 3802091,
+                "inode_total": 3870720,
+                "inode_used": 68629,
+                "mount": "/",
+                "options": "rw,relatime,discard",
+                "size_available": 29576470528,
+                "size_total": 31025332224,
+                "uuid": "59108db9-06fc-4c15-b69a-7abd82e324bf"
+            },
+            {
+                "block_available": 203067,
+                "block_size": 512,
+                "block_total": 213716,
+                "block_used": 10649,
+                "device": "/dev/sda15",
+                "fstype": "vfat",
+                "inode_available": 0,
+                "inode_total": 0,
+                "inode_used": 0,
+                "mount": "/boot/efi",
+                "options": "rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro",
+                "size_available": 103970304,
+                "size_total": 109422592,
+                "uuid": "9F22-48B9"
+            },
+            {
+                "block_available": 1929200,
+                "block_size": 4096,
+                "block_total": 2038135,
+                "block_used": 108935,
+                "device": "/dev/sdb1",
+                "fstype": "ext4",
+                "inode_available": 524276,
+                "inode_total": 524288,
+                "inode_used": 12,
+                "mount": "/mnt",
+                "options": "rw,relatime",
+                "size_available": 7902003200,
+                "size_total": 8348200960,
+                "uuid": "2cd34a1c-641e-4b21-a0fc-e49f735ca9f7"
+            }
+        ],
+        "ansible_nodename": "hostname",
+        "ansible_os_family": "Debian",
+        "ansible_pkg_mgr": "apt",
+        "ansible_proc_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-5.4.0-1109-azure",
+            "console": [
+                "tty1",
+                "ttyS0"
+            ],
+            "earlyprintk": "ttyS0",
+            "ro": true,
+            "root": "UUID=59108db9-06fc-4c15-b69a-7abd82e324bf"
+        },
+        "ansible_processor": [
+            "0",
+            "GenuineIntel",
+            "Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz",
+            "1",
+            "GenuineIntel",
+            "Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz"
+        ],
+        "ansible_processor_cores": 2,
+        "ansible_processor_count": 1,
+        "ansible_processor_nproc": 2,
+        "ansible_processor_threads_per_core": 1,
+        "ansible_processor_vcpus": 2,
+        "ansible_product_name": "Virtual Machine",
+        "ansible_product_serial": "0000-0014-3584-8610-4774-8874-56",
+        "ansible_product_uuid": "099743c7-7dab-2048-bb51-e3f8e327a3af",
+        "ansible_product_version": "7.0",
+        "ansible_python": {
+            "executable": "/usr/bin/python3",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 9,
+                "minor": 6,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                6,
+                9,
+                "final",
+                0
+            ]
+        },
+        "ansible_python_version": "3.6.9",
+        "ansible_real_group_id": 0,
+        "ansible_real_user_id": 0,
+        "ansible_selinux": {
+            "status": "disabled"
+        },
+        "ansible_selinux_python_present": true,
+        "ansible_service_mgr": "systemd",
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAOBtsOZ1Dx8+dTC53sT0rCFdYuXUGtK/RfwOz+PIC/uk75C/D74Oe2Zpx9dwEIsJ9u8FW+q7Tq07B3Hfn7if4HbE4ch+qlr3ONLBWM7R6qkerMSWkXUSYoZmjGuGxs8mAEFN8E7e1O8iQi30AyOzUi15EvWLxI5qpnHITUKKgHRLAAAAFQD+0hqU5C+tV8gD39FupRjYDDZQ/QAAAIBVozIG8i2u0bRr1udMc1XkFy3Zjtqg47OTIIYJgKGZhii7APvXO+yM4jSzWNhojbc5NkXfjXEIPuIX1G9uawFVNAtLB9opvMyCdrp869DNTvJYJLtHlzKKnTU2/zYjkuJHfxbzRw+6+sNwxA/SFJhbXK9Ipjbeq6nzAqbD5i4C6AAAAIBblnFuP6aMgFIur0SExkuTnBwcBP5rQ3VUnoY11Kz6Hkftgo9rkpkSs+31aHy+1zSVtFE46C8506Y0fu2mSTiPmhd9mv8ggHtQZd1f5fogSc0XJJhaC/BcYbfvMX/hwdNmHbvh5Nx30Nn6QeZ2OAYfJPxcpWLwg5CnZ30N0UIQmQ==",
+        "ansible_ssh_host_key_dsa_public_keytype": "ssh-dss",
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCauff/ox7IqBEC4yGM7UPtKPvOMf2IXA2IQLHnfnAyhtcrV7U/PUaxMYNdnbpPcTtm42q39oEpb3qZ68FvQAiU=",
+        "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIKu3lp7u4FFEWTDB+QEqOdPP1vWLsziHsAYloUoyH4Lw",
+        "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDPUTKsDaX0wVm1kRxs4gacyxkF2w7mpYNlmayFgp6s2givXQ5+Qru3DKe7TgiJckGYWJH6jR+M5miR9+iqmvw6AKFMUqjXJnWfMt4AS214bv6v3TyzPD3DPQdjXnIwsAVwEPxvb1wEFoLM7z0CgEkKltRVmiKHvHgl39IsUguJu5Z27G1FhyGKGFPyk1xH2axmo6oat7C2NkjM5WkQyznWecC3P79aMbdJdjscnFKympoirOfTSxsraRc4fUhwqBLhLwbBA9UUYjSLK5uYSWCkuvXukVQCy7iG0iiMvh3Y2B2s71zzTKsOyh/Xvm5aVBsto/kKMuvTR6bidFVB0zdl",
+        "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "ansible_swapfree_mb": 0,
+        "ansible_swaptotal_mb": 0,
+        "ansible_system": "Linux",
+        "ansible_system_capabilities": [
+            "cap_chown",
+            "cap_dac_override",
+            "cap_dac_read_search",
+            "cap_fowner",
+            "cap_fsetid",
+            "cap_kill",
+            "cap_setgid",
+            "cap_setuid",
+            "cap_setpcap",
+            "cap_linux_immutable",
+            "cap_net_bind_service",
+            "cap_net_broadcast",
+            "cap_net_admin",
+            "cap_net_raw",
+            "cap_ipc_lock",
+            "cap_ipc_owner",
+            "cap_sys_module",
+            "cap_sys_rawio",
+            "cap_sys_chroot",
+            "cap_sys_ptrace",
+            "cap_sys_pacct",
+            "cap_sys_admin",
+            "cap_sys_boot",
+            "cap_sys_nice",
+            "cap_sys_resource",
+            "cap_sys_time",
+            "cap_sys_tty_config",
+            "cap_mknod",
+            "cap_lease",
+            "cap_audit_write",
+            "cap_audit_control",
+            "cap_setfcap",
+            "cap_mac_override",
+            "cap_mac_admin",
+            "cap_syslog",
+            "cap_wake_alarm",
+            "cap_block_suspend",
+            "cap_audit_read+ep"
+        ],
+        "ansible_system_capabilities_enforced": "True",
+        "ansible_system_vendor": "Microsoft Corporation",
+        "ansible_uptime_seconds": 2869,
+        "ansible_user_dir": "/root",
+        "ansible_user_gecos": "root",
+        "ansible_user_gid": 0,
+        "ansible_user_id": "root",
+        "ansible_user_shell": "/bin/bash",
+        "ansible_user_uid": 0,
+        "ansible_userspace_architecture": "x86_64",
+        "ansible_userspace_bits": "64",
+        "ansible_virtualization_role": "guest",
+        "ansible_virtualization_tech_guest": [
+            "VirtualPC"
+        ],
+        "ansible_virtualization_tech_host": [],
+        "ansible_virtualization_type": "VirtualPC",
+        "discovered_interpreter_python": "/usr/bin/python3",
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false
+}
+2023-08-15 18:48:42,670 p=32244 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:48:44,057 p=32244 u=codespace n=ansible | 13.68.210.15 | FAILED! => {
+    "msg": "The module /workspaces/Ansible-Axity/BuildAgentProvision/files/cron.jobs was not found in configured module paths"
+}
+2023-08-15 18:49:03,579 p=32433 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:49:04,035 p=32433 u=codespace n=ansible | 13.68.210.15 | FAILED! => {
+    "msg": "The module /workspaces/Ansible-Axity/BuildAgentProvision/files/cron.jobs was not found in configured module paths"
+}
+2023-08-15 18:53:32,288 p=34741 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core
+ in version 2.14. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:53:35,062 p=34741 u=codespace n=ansible | 13.68.210.15 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "gid": 0,
+    "group": "root",
+    "mode": "0755",
+    "owner": "root",
+    "path": "/tmp/mi_directorio",
+    "size": 4096,
+    "state": "directory",
+    "uid": 0
+}
+2023-08-15 18:55:00,010 p=35521 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core
+ in version 2.14. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 18:55:05,254 p=35521 u=codespace n=ansible | 13.68.210.15 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "checksum": "b8241f3aabeaf20a1a728e853b2d9a7c8ff7105b",
+    "dest": "/tmp/mi_directorio/cron.jobs",
+    "gid": 0,
+    "group": "root",
+    "md5sum": "506dd0e2bd4a012f7c87e52ba44d49fa",
+    "mode": "0644",
+    "owner": "root",
+    "size": 34,
+    "src": "/home/adminuser/.ansible/tmp/ansible-tmp-1692125701.1145203-35528-267193992914217/source",
+    "state": "file",
+    "uid": 0
+}
+2023-08-15 20:52:28,199 p=11595 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 20:52:28,723 p=11595 u=codespace n=ansible | PLAY [Install Docker on Ubuntu] *******************************************************************************************************************************
+2023-08-15 20:52:28,735 p=11595 u=codespace n=ansible | TASK [Gathering Facts] ****************************************************************************************************************************************
+2023-08-15 20:52:32,306 p=11595 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 20:52:32,323 p=11595 u=codespace n=ansible | TASK [Download Docker install script] *************************************************************************************************************************
+2023-08-15 20:52:34,001 p=11595 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 20:52:34,013 p=11595 u=codespace n=ansible | TASK [Show Docker install steps] ******************************************************************************************************************************
+2023-08-15 20:53:46,424 p=11595 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 20:53:46,436 p=11595 u=codespace n=ansible | TASK [Install Docker] *****************************************************************************************************************************************
+2023-08-15 20:54:12,731 p=11595 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 20:54:12,742 p=11595 u=codespace n=ansible | TASK [Install uidmap] *****************************************************************************************************************************************
+2023-08-15 20:54:14,563 p=11595 u=codespace n=ansible | [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2023-08-15 20:54:14,563 p=11595 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 20:54:14,574 p=11595 u=codespace n=ansible | TASK [Set permissions for /var/run/docker.sock] ***************************************************************************************************************
+2023-08-15 20:54:15,895 p=11595 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 20:54:15,915 p=11595 u=codespace n=ansible | PLAY [Instalacion de Java] ************************************************************************************************************************************
+2023-08-15 20:54:15,924 p=11595 u=codespace n=ansible | TASK [Gathering Facts] ****************************************************************************************************************************************
+2023-08-15 20:54:17,815 p=11595 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 20:54:17,838 p=11595 u=codespace n=ansible | TASK [Actualizar la lista de paquetes] ************************************************************************************************************************
+2023-08-15 20:54:20,801 p=11595 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 20:54:20,824 p=11595 u=codespace n=ansible | TASK [Instalar openjdk-11-jdk] ********************************************************************************************************************************
+2023-08-15 20:55:13,904 p=11595 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 20:55:13,923 p=11595 u=codespace n=ansible | PLAY RECAP ****************************************************************************************************************************************************
+2023-08-15 20:55:13,923 p=11595 u=codespace n=ansible | 13.68.210.15               : ok=9    changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-15 21:02:41,624 p=15638 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14.
+ Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2023-08-15 21:02:41,757 p=15638 u=codespace n=ansible | PLAY [Install Docker on Ubuntu] *******************************************************************************************************************************
+2023-08-15 21:02:41,768 p=15638 u=codespace n=ansible | TASK [Gathering Facts] ****************************************************************************************************************************************
+2023-08-15 21:02:45,519 p=15638 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:02:45,536 p=15638 u=codespace n=ansible | TASK [Download Docker install script] *************************************************************************************************************************
+2023-08-15 21:02:47,194 p=15638 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:02:47,204 p=15638 u=codespace n=ansible | TASK [Show Docker install steps] ******************************************************************************************************************************
+2023-08-15 21:02:48,611 p=15638 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:02:48,622 p=15638 u=codespace n=ansible | TASK [Install Docker] *****************************************************************************************************************************************
+2023-08-15 21:03:14,814 p=15638 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:03:14,824 p=15638 u=codespace n=ansible | TASK [Install uidmap] *****************************************************************************************************************************************
+2023-08-15 21:03:18,058 p=15638 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:03:18,069 p=15638 u=codespace n=ansible | TASK [Set permissions for /var/run/docker.sock] ***************************************************************************************************************
+2023-08-15 21:03:19,470 p=15638 u=codespace n=ansible | [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2023-08-15 21:03:19,470 p=15638 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:03:19,480 p=15638 u=codespace n=ansible | TASK [Install unzip tool] *************************************************************************************************************************************
+2023-08-15 21:03:25,077 p=15638 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:03:25,097 p=15638 u=codespace n=ansible | PLAY [Instalacion de Java] ************************************************************************************************************************************
+2023-08-15 21:03:25,107 p=15638 u=codespace n=ansible | TASK [Gathering Facts] ****************************************************************************************************************************************
+2023-08-15 21:03:27,090 p=15638 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:03:27,112 p=15638 u=codespace n=ansible | TASK [Actualizar la lista de paquetes] ************************************************************************************************************************
+2023-08-15 21:03:29,872 p=15638 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:03:29,883 p=15638 u=codespace n=ansible | TASK [Instalar openjdk-11-jdk] ********************************************************************************************************************************
+2023-08-15 21:03:32,066 p=15638 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:03:32,084 p=15638 u=codespace n=ansible | PLAY RECAP ****************************************************************************************************************************************************
+2023-08-15 21:03:32,085 p=15638 u=codespace n=ansible | 13.68.210.15               : ok=10   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-15 21:42:11,052 p=31101 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2023-08-15 21:42:11,175 p=31101 u=codespace n=ansible | ERROR! 'var_files' is not a valid attribute for a Play
+
+The error appears to be in '/workspaces/Ansible-Axity/BuildAgentProvision/playbooks/AgentPlaybooks/playbook_agent.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Download and Install Agent
+  ^ here
+
+2023-08-15 21:43:03,430 p=31461 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2023-08-15 21:43:03,565 p=31461 u=codespace n=ansible | PLAY [Install Docker on Ubuntu] ************************************************************************************************************************************************************************************
+2023-08-15 21:43:03,576 p=31461 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:43:07,032 p=31461 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:43:07,050 p=31461 u=codespace n=ansible | TASK [Download Docker install script] ******************************************************************************************************************************************************************************
+2023-08-15 21:43:08,719 p=31461 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:43:08,730 p=31461 u=codespace n=ansible | TASK [Show Docker install steps] ***********************************************************************************************************************************************************************************
+2023-08-15 21:43:10,099 p=31461 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:43:10,110 p=31461 u=codespace n=ansible | TASK [Install Docker] **********************************************************************************************************************************************************************************************
+2023-08-15 21:43:24,642 p=31461 u=codespace n=ansible |  [ERROR]: User interrupted execution
+
+2023-08-15 21:43:40,806 p=31846 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2023-08-15 21:43:40,941 p=31846 u=codespace n=ansible | PLAY [Install Docker on Ubuntu] ************************************************************************************************************************************************************************************
+2023-08-15 21:43:40,952 p=31846 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:43:43,471 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:43:43,488 p=31846 u=codespace n=ansible | TASK [Download Docker install script] ******************************************************************************************************************************************************************************
+2023-08-15 21:43:45,183 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:43:45,194 p=31846 u=codespace n=ansible | TASK [Show Docker install steps] ***********************************************************************************************************************************************************************************
+2023-08-15 21:43:46,585 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:43:46,600 p=31846 u=codespace n=ansible | TASK [Install Docker] **********************************************************************************************************************************************************************************************
+2023-08-15 21:44:12,802 p=31846 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:44:12,812 p=31846 u=codespace n=ansible | TASK [Install uidmap] **********************************************************************************************************************************************************************************************
+2023-08-15 21:44:16,081 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:44:16,091 p=31846 u=codespace n=ansible | TASK [Set permissions for /var/run/docker.sock] ********************************************************************************************************************************************************************
+2023-08-15 21:44:17,458 p=31846 u=codespace n=ansible | [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2023-08-15 21:44:17,459 p=31846 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:44:17,469 p=31846 u=codespace n=ansible | TASK [Install unzip tool] ******************************************************************************************************************************************************************************************
+2023-08-15 21:44:20,477 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:44:20,502 p=31846 u=codespace n=ansible | PLAY [Instalacion de Java] *****************************************************************************************************************************************************************************************
+2023-08-15 21:44:20,518 p=31846 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:44:22,510 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:44:22,527 p=31846 u=codespace n=ansible | TASK [Actualizar la lista de paquetes] *****************************************************************************************************************************************************************************
+2023-08-15 21:44:25,309 p=31846 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:44:25,320 p=31846 u=codespace n=ansible | TASK [Instalar openjdk-11-jdk] *************************************************************************************************************************************************************************************
+2023-08-15 21:44:27,544 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:44:27,564 p=31846 u=codespace n=ansible | PLAY [Download and Install Agent] **********************************************************************************************************************************************************************************
+2023-08-15 21:44:27,574 p=31846 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:44:29,551 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:44:29,570 p=31846 u=codespace n=ansible | TASK [Elimina una configuración previa del agente] *****************************************************************************************************************************************************************
+2023-08-15 21:44:31,073 p=31846 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:44:31,084 p=31846 u=codespace n=ansible | TASK [Crea el directorio del agente] *******************************************************************************************************************************************************************************
+2023-08-15 21:44:32,355 p=31846 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:44:32,367 p=31846 u=codespace n=ansible | TASK [Descarga del agente] *****************************************************************************************************************************************************************************************
+2023-08-15 21:44:34,680 p=31846 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:44:34,692 p=31846 u=codespace n=ansible | TASK [Descomprime .tar del agente] *********************************************************************************************************************************************************************************
+2023-08-15 21:44:35,084 p=31846 u=codespace n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: NoneType: None
+2023-08-15 21:44:35,085 p=31846 u=codespace n=ansible | fatal: [13.68.210.15]: FAILED! => {"changed": false, "msg": "src (or content) and dest are required"}
+2023-08-15 21:44:35,086 p=31846 u=codespace n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************************************
+2023-08-15 21:44:35,087 p=31846 u=codespace n=ansible | 13.68.210.15               : ok=14   changed=5    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-15 21:46:05,810 p=33072 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2023-08-15 21:46:05,946 p=33072 u=codespace n=ansible | PLAY [Install Docker on Ubuntu] ************************************************************************************************************************************************************************************
+2023-08-15 21:46:05,957 p=33072 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:46:09,453 p=33072 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:46:09,479 p=33072 u=codespace n=ansible | TASK [Download Docker install script] ******************************************************************************************************************************************************************************
+2023-08-15 21:46:11,169 p=33072 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:46:11,180 p=33072 u=codespace n=ansible | TASK [Show Docker install steps] ***********************************************************************************************************************************************************************************
+2023-08-15 21:46:12,554 p=33072 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:46:12,565 p=33072 u=codespace n=ansible | TASK [Install Docker] **********************************************************************************************************************************************************************************************
+2023-08-15 21:46:38,710 p=33072 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:46:38,720 p=33072 u=codespace n=ansible | TASK [Install uidmap] **********************************************************************************************************************************************************************************************
+2023-08-15 21:46:41,951 p=33072 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:46:41,962 p=33072 u=codespace n=ansible | TASK [Set permissions for /var/run/docker.sock] ********************************************************************************************************************************************************************
+2023-08-15 21:46:43,331 p=33072 u=codespace n=ansible | [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2023-08-15 21:46:43,332 p=33072 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:46:43,343 p=33072 u=codespace n=ansible | TASK [Install unzip tool] ******************************************************************************************************************************************************************************************
+2023-08-15 21:46:46,318 p=33072 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:46:46,342 p=33072 u=codespace n=ansible | PLAY [Instalacion de Java] *****************************************************************************************************************************************************************************************
+2023-08-15 21:46:46,357 p=33072 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:46:48,447 p=33072 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:46:48,477 p=33072 u=codespace n=ansible | TASK [Actualizar la lista de paquetes] *****************************************************************************************************************************************************************************
+2023-08-15 21:46:51,234 p=33072 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:46:51,244 p=33072 u=codespace n=ansible | TASK [Instalar openjdk-11-jdk] *************************************************************************************************************************************************************************************
+2023-08-15 21:46:53,396 p=33072 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:46:53,416 p=33072 u=codespace n=ansible | PLAY [Download and Install Agent] **********************************************************************************************************************************************************************************
+2023-08-15 21:46:53,426 p=33072 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:46:55,417 p=33072 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:46:55,435 p=33072 u=codespace n=ansible | TASK [Elimina una configuración previa del agente] *****************************************************************************************************************************************************************
+2023-08-15 21:46:56,887 p=33072 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:46:56,898 p=33072 u=codespace n=ansible | TASK [Crea el directorio del agente] *******************************************************************************************************************************************************************************
+2023-08-15 21:46:58,170 p=33072 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:46:58,181 p=33072 u=codespace n=ansible | TASK [Descarga del agente] *****************************************************************************************************************************************************************************************
+2023-08-15 21:47:00,515 p=33072 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:47:00,526 p=33072 u=codespace n=ansible | TASK [Descomprime .tar del agente] *********************************************************************************************************************************************************************************
+2023-08-15 21:47:00,920 p=33072 u=codespace n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: NoneType: None
+2023-08-15 21:47:00,921 p=33072 u=codespace n=ansible | fatal: [13.68.210.15]: FAILED! => {"changed": false, "msg": "src (or content) and dest are required"}
+2023-08-15 21:47:00,923 p=33072 u=codespace n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************************************
+2023-08-15 21:47:00,923 p=33072 u=codespace n=ansible | 13.68.210.15               : ok=14   changed=6    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-15 21:48:25,317 p=34251 u=codespace n=ansible | [DEPRECATION WARNING]: COMMAND_WARNINGS option, the command warnings feature is being removed. This feature will be removed from ansible-core in version 2.14. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2023-08-15 21:48:25,455 p=34251 u=codespace n=ansible | PLAY [Install Docker on Ubuntu] ************************************************************************************************************************************************************************************
+2023-08-15 21:48:25,465 p=34251 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:48:28,922 p=34251 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:48:28,940 p=34251 u=codespace n=ansible | TASK [Download Docker install script] ******************************************************************************************************************************************************************************
+2023-08-15 21:48:30,628 p=34251 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:48:30,639 p=34251 u=codespace n=ansible | TASK [Show Docker install steps] ***********************************************************************************************************************************************************************************
+2023-08-15 21:48:32,008 p=34251 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:48:32,019 p=34251 u=codespace n=ansible | TASK [Install Docker] **********************************************************************************************************************************************************************************************
+2023-08-15 21:48:58,244 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:48:58,255 p=34251 u=codespace n=ansible | TASK [Install uidmap] **********************************************************************************************************************************************************************************************
+2023-08-15 21:49:01,509 p=34251 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:49:01,519 p=34251 u=codespace n=ansible | TASK [Set permissions for /var/run/docker.sock] ********************************************************************************************************************************************************************
+2023-08-15 21:49:02,894 p=34251 u=codespace n=ansible | [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2023-08-15 21:49:02,895 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:02,905 p=34251 u=codespace n=ansible | TASK [Install unzip tool] ******************************************************************************************************************************************************************************************
+2023-08-15 21:49:05,878 p=34251 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:49:05,898 p=34251 u=codespace n=ansible | PLAY [Instalacion de Java] *****************************************************************************************************************************************************************************************
+2023-08-15 21:49:05,907 p=34251 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:49:07,892 p=34251 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:49:07,909 p=34251 u=codespace n=ansible | TASK [Actualizar la lista de paquetes] *****************************************************************************************************************************************************************************
+2023-08-15 21:49:10,661 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:10,671 p=34251 u=codespace n=ansible | TASK [Instalar openjdk-11-jdk] *************************************************************************************************************************************************************************************
+2023-08-15 21:49:12,825 p=34251 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:49:12,845 p=34251 u=codespace n=ansible | PLAY [Download and Install Agent] **********************************************************************************************************************************************************************************
+2023-08-15 21:49:12,855 p=34251 u=codespace n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************
+2023-08-15 21:49:14,830 p=34251 u=codespace n=ansible | ok: [13.68.210.15]
+2023-08-15 21:49:14,848 p=34251 u=codespace n=ansible | TASK [Elimina una configuración previa del agente] *****************************************************************************************************************************************************************
+2023-08-15 21:49:16,370 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:16,418 p=34251 u=codespace n=ansible | TASK [Crea el directorio del agente] *******************************************************************************************************************************************************************************
+2023-08-15 21:49:17,800 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:17,811 p=34251 u=codespace n=ansible | TASK [Descarga del agente] *****************************************************************************************************************************************************************************************
+2023-08-15 21:49:20,148 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:20,159 p=34251 u=codespace n=ansible | TASK [Descomprime .tar del agente] *********************************************************************************************************************************************************************************
+2023-08-15 21:49:30,581 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:30,592 p=34251 u=codespace n=ansible | TASK [Configura el agente] *****************************************************************************************************************************************************************************************
+2023-08-15 21:49:35,481 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:35,502 p=34251 u=codespace n=ansible | TASK [Asigna permisos a la carpeta del agente] *********************************************************************************************************************************************************************
+2023-08-15 21:49:36,907 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:36,918 p=34251 u=codespace n=ansible | TASK [Inicia el agente] ********************************************************************************************************************************************************************************************
+2023-08-15 21:49:38,908 p=34251 u=codespace n=ansible | changed: [13.68.210.15]
+2023-08-15 21:49:38,928 p=34251 u=codespace n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************************************
+2023-08-15 21:49:38,928 p=34251 u=codespace n=ansible | 13.68.210.15               : ok=18   changed=10   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

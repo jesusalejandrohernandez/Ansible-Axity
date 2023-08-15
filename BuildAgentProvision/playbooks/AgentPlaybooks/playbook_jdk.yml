@@ -1,8 +1,7 @@
 ---
 - name: Instalacion de Java
-  hosts: virtualmachine
+  hosts: buildAgents
   gather_facts: true
-  become: yes
   tasks:
     - name: Actualizar la lista de paquetes
       apt:
